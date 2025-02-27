@@ -93,11 +93,15 @@
     transform: translate(-50%, -8px);
 }
 
-/* .header .gnb>ul>li>a:focus+ul {
+
+/* tab 이동을 위한 css */
+.header .gnb>ul>li:focus-within ul {
     opacity: 1;
     visibility: visible;
-    transform: translate(-50%, 24px);
-} */
+    transform: translate(-50%, -8px);
+}
+
+
 
 .header .gnb>ul>li ul a {
     padding: 0 40px;
