@@ -297,43 +297,201 @@
     margin-top: 16px;
 }
 
-.default_btn {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    height: 72px;
-    border: 2px solid #fff;
-    color: #fff;
-    padding: 0 40px;
-    border-radius: 36px;
-    overflow: hidden;
+
+.main_customer .inner {
+    display: flex;
+    gap: 30px;
 }
 
-.default_btn::before {
+.main_customer .inner>* {
+    flex: 1;
+    padding: 80px 80px;
+}
+
+.main_customer .inner .left {
+    background: #f9f9f9 url(../images/img_dokdo.png) no-repeat right bottom;
+    border-radius: 72px;
+}
+
+.main_customer .inner h3 {
+    margin-bottom: 32px;
+}
+
+.main_customer .inner .left p {
+    margin-bottom: 56px;
+    font-weight: 300;
+    opacity: 0.75;
+}
+
+.main_customer .inner .right .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+}
+
+.main_customer .inner .right .contact i {
+    background: #ddd;
+    padding: 16px;
+    border-radius: 50%;
+}
+
+.main_customer .inner .right .contact strong {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.main_customer .inner .right .contact a {
+    padding: 8px 24px;
+    background: #333;
+    color: #fff;
+    border-radius: 16px;
+}
+
+.main_customer .inner .right .show {}
+
+.main_customer .inner .right .show li {
+    display: flex;
+    align-items: flex-start;
+    gap: 56px;
+
+    margin-bottom: 16px;
+}
+
+.main_customer .inner .right .show li strong {
+    position: relative;
+    width: 80px;
+    line-height: 1.5;
+
+    padding-left: 16px;
+
+
+    font-weight: 700;
+
+    text-align: justify;
+}
+
+.main_customer .inner .right .show li p {
+    font-weight: 300;
+}
+
+.main_customer .inner .right .show li p span {
+    opacity: 0.5;
+}
+
+.main_customer .inner .right .show li strong::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    background: #ddd;
+}
+
+.main_notice {}
+
+.main_notice h2 {
+    font-size: 40px;
+    font-weight: 700;
+
+    margin-bottom: 40px;
+}
+
+.main_notice .notice_wrap {
+    display: flex;
+    gap: 30px;
+    max-width: calc((100% - 1410px)/2 + 1410px);
+    margin-left: auto;
+}
+
+.main_notice .notice_wrap .left {
+    flex: 1;
+    padding: 40px 24px 0 24px;
+}
+
+.main_notice .notice_wrap .left p {
+    opacity: 0.75;
+}
+
+.main_notice .notice_wrap .right {
+    position: relative;
+    flex: 2;
+    min-width: 0;
+}
+
+.main_notice .notice_wrap .right::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: auto;
-    z-index: -1;
 
-    height: 0;
-    background: #09847F;
+    width: 200px;
+    height: 200px;
 
-    transition: 0.4s;
+    border: 64px solid #09847F;
+
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
 }
 
-.default_btn:hover::before {
-    height: 100%;
-    top: auto;
-    bottom: 0;
+.main_notice .notice_wrap .right .itm {
+    padding: 64px;
+    background: #f1f1f1;
+    border-radius: 56px;
 }
 
-.default_btn::after {
-    content: "";
-    background: url(../images/arrow-right.svg) no-repeat center center/16px;
-    width: 16px;
-    height: 16px;
-    margin-left: 18px;
+.main_notice .notice_wrap .right .itm .img_box {
+    border-radius: 16px;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.main_notice .notice_wrap .right .itm .img_box img {
+    width: 100%;
+}
+
+.main_notice .notice_wrap .right .itm em {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #09847F;
+    padding: 0 24px;
+    height: 24px;
+
+    color: #09847F;
+    font-size: 12px;
+
+    text-transform: uppercase;
+    border-radius: 12px;
+}
+
+.main_notice .notice_wrap .right .itm strong {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.main_notice .arrows {
+    display: flex;
+    gap: 16px;
+    margin-top: 64px;
+}
+
+.main_notice .arrows button {
+    width: 56px;
+    height: 56px;
+    background: #333;
+    border-radius: 50%;
 }

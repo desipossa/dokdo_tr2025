@@ -11,6 +11,17 @@ $(function () {
             prevEl: '.main_visual .arrows .prev',
         },
 
+    });
+
+    const MNS = new Swiper('.main_notice .main_notice_slide', {
+        loop: true,
+        slidesPerView: 2.5,
+        spaceBetween: 30,
+
+        navigation: {
+            nextEl: '.main_notice .arrows .next',
+            prevEl: '.main_notice .arrows .prev',
+        },
     })
 
 });
