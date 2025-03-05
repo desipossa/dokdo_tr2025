@@ -495,3 +495,304 @@
     background: #333;
     border-radius: 50%;
 }
+
+.main_banner {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -120px;
+}
+
+
+.main_banner .inner {
+    display: flex;
+    gap: 120px;
+    background: #09847F;
+    padding: 64px 64px;
+    border-radius: 56px;
+}
+
+.main_banner .inner>* {
+    flex: 1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_banner .inner figure {
+    width: 80px;
+}
+
+.main_banner .inner {
+    position: relative;
+}
+
+.main_banner .inner::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 16px;
+    bottom: 16px;
+
+    width: 1px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.main_banner h3 {
+    margin-bottom: 24px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.main_banner p {
+    color: #fff;
+}
+
+.footer {
+    background: #3a3846;
+    border-radius: 200px 0 0 0;
+    overflow: hidden;
+}
+
+.footer .footer_top {
+    position: relative;
+    height: 640px;
+    background: url(../images/bg_banner.jpg) no-repeat center top;
+}
+
+.footer .footer_top .tit {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    /* max-width: 320px;
+    width: 100%; */
+}
+
+.footer .footer_top .tit figure {
+    width: 240px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+}
+
+.footer .footer_top .tit .txt {
+    position: relative;
+    font-family: 'Noto Serif KR';
+    font-size: 28px;
+    font-weight: 500;
+    white-space: nowrap;
+    line-height: 32px;
+    color: #333;
+
+
+}
+
+.footer .footer_top .tit .txt::after {
+    content: attr(data-txt);
+    color: #fff;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    overflow: hidden;
+
+    animation: txt_ani 7s steps(31) infinite;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+@keyframes txt_ani {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+.footer .footer_top .spot {
+    position: absolute;
+    top: 320px;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+
+    max-width: 720px;
+    width: 100%;
+}
+
+.footer .footer_top .spot span {
+    position: absolute;
+    font-family: 'Noto Serif KR';
+    color: #fff;
+}
+
+.footer .footer_top .spot span::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    background: #fff;
+
+    opacity: 0.1;
+
+    animation: spot 1s infinite;
+}
+
+.footer .footer_top .spot span::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    background: #fff;
+}
+
+@keyframes spot {
+    0% {
+        transform: translate(-50%, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, 0) scale(4);
+    }
+
+    100% {
+        transform: translate(-50%, 0) scale(1);
+    }
+}
+
+
+.footer .footer_top .spot .west {
+    top: 56px;
+    left: 56px;
+}
+
+.footer .footer_top .spot .east {
+    top: 156px;
+    right: 156px;
+}
+
+
+.footer .footer_bottom {
+    padding: 80px 0;
+}
+
+.footer .footer_bottom .inner {
+    position: relative;
+}
+
+.footer .footer_bottom .map {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    transform: translate(0, -50%);
+
+    background: #B4613D;
+
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .footer_bottom .map::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    z-index: -1;
+    background: #B4613D;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.footer .footer_bottom .map:hover::before {
+    animation: icon 2s infinite;
+}
+
+
+.footer .footer_bottom .map img {
+    height: 40px;
+}
+
+.footer .footer_bottom .map p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+
+    text-align: center;
+    margin-top: 16px;
+}
+
+.footer .footer_bottom .customer {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 16px;
+}
+
+.footer .footer_bottom .customer li {
+    position: relative;
+}
+
+.footer .footer_bottom .customer a {
+    color: #fff;
+}
+
+.footer .footer_bottom .customer li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translate(-50%, -50%);
+
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+
+    background: #fff;
+
+}
+
+.footer .footer_bottom .info {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 16px;
+}
+
+.footer .footer_bottom .info li {
+    color: #fff;
+}
+
+.footer .footer_bottom address {
+    color: #ddd;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+}
